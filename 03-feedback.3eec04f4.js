@@ -16,4 +16,4 @@ var n,t=arguments[3],r=require("buffer").Buffer;(function(){var r,e=200,u="Unsup
 },{"buffer":"dskh"}],"TTyb":[function(require,module,exports) {
 "use strict";var e=require("lodash");const t={},a=document.querySelector("form"),r=document.querySelector("input"),o=document.querySelector("textarea");function n(e){t[e.target.name]=e.target.value,localStorage.setItem("feedback-form-state",JSON.stringify(t))}function c(){const e=localStorage.getItem("feedback-form-state"),t=JSON.parse(e);t&&(r.value=t.email,o.value=t.message)}function l(e){e.preventDefault(),console.log(t),e.target.reset(),localStorage.removeItem("feedback-form-state")}a.addEventListener("submit",l),a.addEventListener("input",(0,e.throttle)(n,500)),c();
 },{"lodash":"B1iE"}]},{},["TTyb"], null)
-//# sourceMappingURL=/goit-js-hw-08/03-feedback.76b15e0c.js.map
+//# sourceMappingURL=/goit-js-hw-08/03-feedback.3eec04f4.js.map
