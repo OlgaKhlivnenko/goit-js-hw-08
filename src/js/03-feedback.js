@@ -1,7 +1,5 @@
 import  {throttle}  from "lodash";
-const formData = {
-   
-};
+const formData = {};
 
 const form = document.querySelector(`form`);
 const input = document.querySelector(`input`);
@@ -22,16 +20,15 @@ function populateTextarea() {
     const savedMessage = localStorage.getItem(`feedback-form-state`);
     const parsedForm = JSON.parse(savedMessage);
     if (parsedForm) {
-        
         input.value = parsedForm.email;
         textarea.value = parsedForm.message;
-
     }
+    
 }
 function onFormSubmit(evt) {
     evt.preventDefault();
-    console.log(formData);
+    console.log(localStorage.getItem(`feedback-form-state`));
     evt.target.reset();
     localStorage.removeItem(`feedback-form-state`);
-    
 }
+
