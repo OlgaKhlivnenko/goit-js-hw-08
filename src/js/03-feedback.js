@@ -1,5 +1,5 @@
 import  {throttle}  from "lodash";
-const formData = {};
+
 
 const form = document.querySelector(`form`);
 const input = document.querySelector(`input`);
@@ -7,7 +7,10 @@ const textarea = document.querySelector(`textarea`);
 
 form.addEventListener(`submit`, onFormSubmit);
 form.addEventListener(`input`, throttle(onFormInput, 500));
-
+const formData = {
+email: '',
+message: '',  
+};
 populateTextarea();
 
 
